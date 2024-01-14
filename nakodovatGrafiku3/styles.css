@@ -1,0 +1,186 @@
+
+body {
+    margin: 0px;
+    font-family: Roboto;
+    color: #ffffff;
+}
+
+.center {
+    margin: 0px auto;
+    max-width: 1200px;
+    width: 75%;
+}
+
+.sidetext {
+    margin: 0px 10px;
+    float: left;
+}
+
+header {
+    background-color: #0071BD;
+    min-height: 50px;
+}
+
+.container {
+    display: flex;
+}
+
+.boxes-grid {
+    display: grid;
+    gap: 10px;
+    margin: 10px 0px;
+
+}
+
+.boxes-grid div {
+    min-height: 150px;
+}
+
+.box-type-1 {
+    background-color: #FBB03B;
+    grid-column: span 3;
+}
+
+.box-type-1:hover {
+    outline: 3px #E0791A solid;
+    color: #E0791A;
+}
+
+.box-type-2 {
+    background-color: #F15A25;
+    grid-column: span 4;
+}
+
+.box-type-2:hover {
+    outline: 3px  #D8480E solid;
+    color:  #D8480E;
+}
+
+.box-type-3 {
+    background-color: #C2272D;
+    grid-column: span 6;
+}
+
+.box-type-3:hover {
+    outline: 3px #A41C23 solid;
+    color: #A41C23;
+}
+
+.box-type-sidebar {
+    background-color: #01A89E;
+    grid-column: span 6;
+    grid-column-start: 13;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.box-type-sidebar:hover {
+    outline: 3px #00CCB2 solid;
+    color: #00CCB2;
+}
+
+footer {
+    background-color: #662E91;
+}
+
+.boxes-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.boxes-flex div {
+    height: 125px;
+    background-color: #B296C7;  
+    margin: 10px 5px;
+    flex: 30%;
+}
+
+nav {
+    display: flex;
+    align-self: end;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+nav li {
+    list-style-type: none;
+    padding: 10px;
+    margin: 20px 5px;
+    background-color: #81B8DF;
+    
+    
+}
+
+nav li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+nav li:last-child {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+
+    .box-type-1 {
+        grid-column: span 6;
+    }
+
+    .box-type-2 {
+        display: none;
+    }
+
+    .box-type-3 {
+        grid-column: span 6;
+    }
+
+    .box-type-sidebar {
+        grid-column: span 12;
+        grid-row: span 1;
+    }
+
+    .boxes-flex div {
+        flex: 40%;
+    }
+
+    nav li {
+        display: none;
+    }
+
+    nav li:last-child {
+        display: block;
+    }
+
+    .sidetext {
+        display: none;
+    }
+
+}
+
+@media (max-width: 520px) {
+
+    .box-type-1 {
+        grid-column: span 12;
+    }
+
+    .box-type-2 {
+        display:block;
+        grid-column: span 12;
+    }
+
+    .box-type-3 {
+        grid-column: span 12;
+    }
+
+    .boxes-flex div:nth-child(1), .boxes-flex div:nth-child(2){
+        display: none;
+    }
+
+    .boxes-flex div {
+        flex: 100%;
+    }
+}
+
+
